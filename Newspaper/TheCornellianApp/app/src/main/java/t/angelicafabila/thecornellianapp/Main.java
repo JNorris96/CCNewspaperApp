@@ -5,10 +5,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-//import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-//import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -19,7 +17,6 @@ import java.io.IOException;
 
 public class Main extends AppCompatActivity
 {
-    Intent intent = new Intent();
     TextView itemTitleBox;
 
     @Override
@@ -49,7 +46,6 @@ public class Main extends AppCompatActivity
         configureAboutUsButton();
         configureContactUsButton();
         configureArchiveButton();
-        configureEmailButton();
     }
 
     private void configureMainButton()
@@ -103,33 +99,6 @@ public class Main extends AppCompatActivity
             }
         });
     }
-
-    private void configureEmailButton()
-    {
-        Button EmailButton = findViewById(R.id.EmailButton);
-        EmailButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity
-                        (new Intent(Intent.ACTION_VIEW));
-                        Uri data = Uri.parse("mailto: thecornellian@cornellcollege.edu");
-                        intent.setData(data);
-                        intent.setType("message/rfc822");
-                        String [] recipient = {"thecornellian@cornellcollege.edu"};
-                        intent.putExtra(Intent.EXTRA_EMAIL, recipient);
-                        intent.putExtra(Intent.EXTRA_SUBJECT, "Letter to the Editor");
-                       // String[] to = {"thecornellian@cornellcollege.edu"};
-                       // intent.putExtra(Intent.EXTRA_EMAIL, to);
-                        //intent.putExtra(Intent.EXTRA_SUBJECT, "Letter to the Editor");
-                        //intent.setType("message");
-                       // Intent.createChooser(intent, "Send Email");
-            }
-        });
-    }
-
-
 
     public class getNews extends AsyncTask<Void, Void, Void>
     {

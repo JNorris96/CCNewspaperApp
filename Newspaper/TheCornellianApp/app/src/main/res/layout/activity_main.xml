@@ -145,15 +145,5 @@
         android:layout_marginTop="186dp"
         app:srcCompat="@android:drawable/ic_menu_rotate" />
 
-    <Button
-        android:id="@+id/EmailButton"
-        android:layout_width="68dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/MainButton"
-        android:layout_alignParentEnd="true"
-        android:clickable="true"
-        android:text="Email"
-        android:layout_alignParentRight="true"
-        android:focusable="true" />
 
 </RelativeLayout>
