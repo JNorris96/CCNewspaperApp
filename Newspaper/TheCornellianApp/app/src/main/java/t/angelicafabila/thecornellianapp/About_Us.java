@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class About_Us extends AppCompatActivity {
+    Intent intent = new Intent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class About_Us extends AppCompatActivity {
         configureAboutUsButton();
         configureContactUsButton();
         configureArchiveButton();
+        configureEmailButton();
     }
 
     private void configureMainButton()
@@ -68,5 +70,30 @@ public class About_Us extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void configureEmailButton()
+    {
+        Button EmailButton = findViewById(R.id.EmailButton);
+        EmailButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity
+                        (new Intent(Intent.ACTION_VIEW));
+                Uri data = Uri.parse("mailto: thecornellian@cornellcollege.edu");
+                intent.setData(data);
+                intent.setType("message");
+                String [] recipient = {"thecornellian@cornellcollege.edu"};
+                intent.putExtra(Intent.EXTRA_EMAIL, recipient);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Letter to the Editor");
+                //String[] to = {"thecornellian@cornellcollege.edu"};
+                // intent.putExtra(Intent.EXTRA_EMAIL, to);
+                //intent.putExtra(Intent.EXTRA_SUBJECT, "Letter to the Editor");
+                //intent.setType("message");
+                // Intent.createChooser(intent, "Send Email");
+            }
+        });
     }
 }

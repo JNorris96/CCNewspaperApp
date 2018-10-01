@@ -19,6 +19,7 @@ import java.io.IOException;
 
 public class Main extends AppCompatActivity
 {
+    Intent intent = new Intent();
     TextView itemTitleBox;
 
     @Override
@@ -31,7 +32,7 @@ public class Main extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.actionbar);
         setSupportActionBar(toolbar);
 
-        ImageButton feedRefreshButton = (ImageButton) findViewById(R.id.feedRefresh);
+        ImageButton feedRefreshButton = findViewById(R.id.feedRefresh);
         feedRefreshButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -42,17 +43,18 @@ public class Main extends AppCompatActivity
             }
         });
 
-        itemTitleBox = (TextView) findViewById(R.id.itemTitle);
+        itemTitleBox = findViewById(R.id.itemTitle);
 
         configureMainButton();
         configureAboutUsButton();
         configureContactUsButton();
         configureArchiveButton();
+        configureEmailButton();
     }
 
     private void configureMainButton()
     {
-        Button mainButton = (Button) findViewById(R.id.MainButton);
+        Button mainButton = findViewById(R.id.MainButton);
         mainButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -65,7 +67,7 @@ public class Main extends AppCompatActivity
 
     private void configureAboutUsButton()
     {
-        Button aboutUsButton = (Button) findViewById(R.id.AboutUsButton);
+        Button aboutUsButton = findViewById(R.id.AboutUsButton);
         aboutUsButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -78,7 +80,7 @@ public class Main extends AppCompatActivity
 
     private void configureContactUsButton()
     {
-        Button contactUsButton = (Button) findViewById(R.id.ContactUsButton);
+        Button contactUsButton = findViewById(R.id.ContactUsButton);
         contactUsButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -90,7 +92,7 @@ public class Main extends AppCompatActivity
     }
     private void configureArchiveButton()
     {
-        Button archiveButton = (Button) findViewById(R.id.ArchiveButton);
+        Button archiveButton = findViewById(R.id.ArchiveButton);
         archiveButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -101,6 +103,33 @@ public class Main extends AppCompatActivity
             }
         });
     }
+
+    private void configureEmailButton()
+    {
+        Button EmailButton = findViewById(R.id.EmailButton);
+        EmailButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity
+                        (new Intent(Intent.ACTION_VIEW));
+                        Uri data = Uri.parse("mailto: thecornellian@cornellcollege.edu");
+                        intent.setData(data);
+                        intent.setType("message/rfc822");
+                        String [] recipient = {"thecornellian@cornellcollege.edu"};
+                        intent.putExtra(Intent.EXTRA_EMAIL, recipient);
+                        intent.putExtra(Intent.EXTRA_SUBJECT, "Letter to the Editor");
+                       // String[] to = {"thecornellian@cornellcollege.edu"};
+                       // intent.putExtra(Intent.EXTRA_EMAIL, to);
+                        //intent.putExtra(Intent.EXTRA_SUBJECT, "Letter to the Editor");
+                        //intent.setType("message");
+                       // Intent.createChooser(intent, "Send Email");
+            }
+        });
+    }
+
+
 
     public class getNews extends AsyncTask<Void, Void, Void>
     {
