@@ -16,7 +16,14 @@
     <string name="introduction">\tThe Cornellian Newspaper is the school newspaper for Cornell College in Mount Vernon, Iowa. It has been in print for over eighty years. It publishes one paper copy each block and will be publishing shorter online articles between the weeks that there is no paper copy. If you have any suggestions or comments you wish to make about the paper, please direct them to the current editor in chief. If you are interested in joining our staff, please contact the current editor in chief.</string>
     <string name="editorHeader">Editorial Board</string>
     <string name="introHeader">Introduction</string>
-    <string name="editorialBoard">Editor in Chief: M.E. Scoonover-Nelson\nAssistant Editor in Chief: Angel Fabila\nNews Editor: Matthew McDermott\nFeatures Editor: Emily Maniacci\nArts and Entertainment Editor: Maddie Leman\nOpinion Editor: Sofia Lopera Cordona\nCopy Editor: Alexandra Lewyn\nLayout Editor: Sage Parker</string>
+    <string name="editorChief"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/editor-in-chief/">Editor in Chief: M.E. Scoonover-Nelson</a></string>
+    <string name="assistantEditorChief"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/assistant-editor-in-chief/">Assistant Editor in Chief: Angel Fabila</a></string>
+    <string name="newsEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/news-editor/">News Editor: Matthew McDermott</a></string>
+    <string name="featuresEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/features-editor/">Features Editor: Emily Maniacci</a></string>
+    <string name="artEntertainmentEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/arts-entertainment-editor/">Arts and Entertainment Editor: Maddie Leman</a></string>
+    <string name="opinionEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/opinions-editor/">Opinion Editor: Sofia Lopera Cordona</a></string>
+    <string name="copyEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/copy-editor/">Copy Editor: Alexandra Lewyn</a></string>
+    <string name="layoutEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/layout-editor/">Layout Editor: Sage Parker</a></string>
     <string name="feedRefreshText">Click to Refresh Feed</string>
     <string name="titleBoxText">Title</string>
     <string name="authorBoxText">Author</string>
