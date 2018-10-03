@@ -67,7 +67,5 @@ public class About_Us extends AppCompatActivity {
                         Uri.parse("http://cornellcollege.advantage-preservation.com/")));
             }
         });
-
     }
-
 }
