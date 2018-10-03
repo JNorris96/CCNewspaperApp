@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 
@@ -21,6 +22,9 @@ public class Main extends AppCompatActivity
 {
     Intent intent = new Intent();
     TextView itemTitleBox;
+//    TextView itemAuthorBox;
+//    TextView itemDateBox;
+//    TextView itemContentBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,6 +48,9 @@ public class Main extends AppCompatActivity
         });
 
         itemTitleBox = findViewById(R.id.itemTitle);
+//        itemAuthorBox = findViewById(R.id.itemCreator);
+//        itemDateBox = findViewById(R.id.itemPubDate);
+//        itemContentBox = findViewById(R.id.itemContent);
 
         configureMainButton();
         configureAboutUsButton();
@@ -129,11 +136,12 @@ public class Main extends AppCompatActivity
         });
     }
 
-
-
     public class getNews extends AsyncTask<Void, Void, Void>
     {
         String title;
+        String author;
+        String date;
+        String content;
 
         @Override
         protected Void doInBackground(Void... voids)
@@ -142,10 +150,26 @@ public class Main extends AppCompatActivity
             {
                 Document url = Jsoup.connect("https://blogs.cornellcollege.edu/cornellian/").get();
 
-                title = url.text();
+                Element urlTitleText = url.select("h2").first();
+                urlTitleText.hasClass("entry-title");
+
+                Element urlAuthorText = url.select("span").first();
+                urlAuthorText.hasClass("author vcard");
+
+                Element urlDateText = url.select("span").first();
+                urlDateText.hasClass("posted-on");
+
+                Element urlContentText = url.select("span").first();
+                urlContentText.hasClass("entry-content");
+
+                title = urlTitleText.text();
+                author = urlAuthorText.text();
+                date = urlDateText.text();
+                content = urlContentText.text();
 
 
-            } catch (IOException e)
+            }
+            catch (IOException e)
             {
                 e.printStackTrace();
             }
@@ -157,6 +181,9 @@ public class Main extends AppCompatActivity
         {
             super.onPostExecute(aVoid);
             itemTitleBox.setText(title);
+//            itemAuthorBox.setText(author);
+//            itemDateBox.setText(date);
+//            itemContentBox.setText(content);
 
         }
     }
