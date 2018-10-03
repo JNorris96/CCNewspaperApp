@@ -143,9 +143,7 @@
         android:text="@string/editorChief"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:id="@+id/AssistantEditorChief"
@@ -156,9 +154,7 @@
         android:text="@string/assistantEditorChief"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/NewsEditor"
@@ -169,9 +165,7 @@
         android:text="@string/newsEditor"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/FeaturesEditor"
@@ -182,9 +176,7 @@
         android:text="@string/featuresEditor"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/ArtEntertainmentEditor"
@@ -195,9 +187,7 @@
         android:text="@string/artEntertainmentEditor"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:id="@+id/OpinionEditor"
@@ -208,9 +198,7 @@
         android:text="@string/opinionEditor"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:id="@+id/CopyEditor"
@@ -221,9 +209,7 @@
         android:text="@string/copyEditor"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:id="@+id/LayoutEditor"
@@ -236,8 +222,6 @@
         android:text="@string/layoutEditor"
         android:textColor="#FFF"
         android:textColorLink="#FFF"
-        android:textSize="12sp"
-        android:autoLink="web"
-        android:clickable="true"/>
+        android:textSize="12sp"/>
 
 </RelativeLayout>
