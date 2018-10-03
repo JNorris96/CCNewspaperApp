@@ -81,17 +81,6 @@
         app:layout_constraintStart_toEndOf="@+id/ContactUsButton"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/EmailButton"
-        android:layout_width="65dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/MainButton"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Email" />
-
     <TextView
         android:id="@+id/Introduction"
         android:layout_width="wrap_content"

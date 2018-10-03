@@ -22,6 +22,7 @@
         android:contentDescription="@string/cornellianHead"
         android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/actionbar"
         app:srcCompat="@drawable/cornellian_head" />
@@ -133,9 +134,18 @@
         android:layout_alignTop="@+id/MainButton"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
-        android:text="Email" />
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/facebook_button"
+        app:layout_constraintEnd_toStartOf="@+id/submit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/facebook_button"

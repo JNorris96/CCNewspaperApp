@@ -5,10 +5,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-//import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-//import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -20,7 +18,6 @@ import java.io.IOException;
 
 public class Main extends AppCompatActivity
 {
-    Intent intent = new Intent();
     TextView itemTitleBox;
 //    TextView itemAuthorBox;
 //    TextView itemDateBox;
@@ -56,7 +53,6 @@ public class Main extends AppCompatActivity
         configureAboutUsButton();
         configureContactUsButton();
         configureArchiveButton();
-        configureEmailButton();
     }
 
     private void configureMainButton()
@@ -111,6 +107,7 @@ public class Main extends AppCompatActivity
         });
     }
 
+<<<<<<< HEAD
     private void configureEmailButton()
     {
         Button EmailButton = findViewById(R.id.EmailButton);
@@ -136,6 +133,8 @@ public class Main extends AppCompatActivity
         });
     }
 
+=======
+>>>>>>> 5b53445935b97e5d6360a4e4c0233fe3bdd960e0
     public class getNews extends AsyncTask<Void, Void, Void>
     {
         String title;
