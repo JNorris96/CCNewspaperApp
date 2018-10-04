@@ -13,15 +13,16 @@ import android.widget.TextView;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
 public class Main extends AppCompatActivity
 {
     TextView itemTitleBox;
-//    TextView itemAuthorBox;
-//    TextView itemDateBox;
-//    TextView itemContentBox;
+    TextView itemAuthorBox;
+    TextView itemDateBox;
+    TextView itemContentBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,14 +41,13 @@ public class Main extends AppCompatActivity
             public void onClick(View v)
             {
                 new getNews().execute();
-
             }
         });
 
         itemTitleBox = findViewById(R.id.itemTitle);
-//        itemAuthorBox = findViewById(R.id.itemCreator);
-//        itemDateBox = findViewById(R.id.itemPubDate);
-//        itemContentBox = findViewById(R.id.itemContent);
+        itemAuthorBox = findViewById(R.id.itemCreator);
+        itemDateBox = findViewById(R.id.itemPubDate);
+        itemContentBox = findViewById(R.id.itemContent);
 
         configureMainButton();
         configureAboutUsButton();
@@ -67,7 +67,6 @@ public class Main extends AppCompatActivity
             }
         });
     }
-
     private void configureAboutUsButton()
     {
         Button aboutUsButton = findViewById(R.id.AboutUsButton);
@@ -80,7 +79,6 @@ public class Main extends AppCompatActivity
             }
         });
     }
-
     private void configureContactUsButton()
     {
         Button contactUsButton = findViewById(R.id.ContactUsButton);
@@ -121,24 +119,21 @@ public class Main extends AppCompatActivity
             {
                 Document url = Jsoup.connect("https://blogs.cornellcollege.edu/cornellian/").get();
 
-                Element urlTitleText = url.select("h2").first();
-                urlTitleText.hasClass("entry-title");
-
-                Element urlAuthorText = url.select("span").first();
-                urlAuthorText.hasClass("author vcard");
-
-                Element urlDateText = url.select("span").first();
-                urlDateText.hasClass("posted-on");
-
-                Element urlContentText = url.select("span").first();
-                urlContentText.hasClass("entry-content");
-
+                Element urlTitleText = url.select("h2.entry-title").first();
+                //urlTitleText.hasClass("entry-title");
                 title = urlTitleText.text();
+
+                Element urlAuthorText = url.select("span").last();
+                urlAuthorText.hasClass("author.vcard");
                 author = urlAuthorText.text();
+
+                Element urlDateText = url.select("span.posted-on").first();
+                //urlDateText.hasClass("posted-on");
                 date = urlDateText.text();
+
+                Element urlContentText = url.select("div.entry-content").first();
+                //urlContentText.hasClass("entry-content");
                 content = urlContentText.text();
-
-
             }
             catch (IOException e)
             {
@@ -152,10 +147,9 @@ public class Main extends AppCompatActivity
         {
             super.onPostExecute(aVoid);
             itemTitleBox.setText(title);
-//            itemAuthorBox.setText(author);
-//            itemDateBox.setText(date);
-//            itemContentBox.setText(content);
-
+            itemAuthorBox.setText(author);
+            itemDateBox.setText(date);
+            itemContentBox.setText(content);
         }
     }
 }
