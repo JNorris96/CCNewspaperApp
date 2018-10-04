@@ -11,4 +11,6 @@ Jacob Norris will continue to improve the design and performance of the mobile a
 
 The team used Android Studio as their IDE for this project and used Java with XML files to build the mobile application. They committed to use the Scrum methodology and utilized Trello for their Scrum board which can be seen at the following link: https://trello.com/b/fPF6IOAg .
 
-
+![Home Page](readme-images/CornellianHomePage.png)
+![About Us Page](readme-images/CornellianAboutPage.png)
+![Contact Us Page](readme-images/CornellianContactPage.png)
