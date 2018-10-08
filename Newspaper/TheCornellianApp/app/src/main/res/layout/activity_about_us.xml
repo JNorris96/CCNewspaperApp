@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main"
-    android:background ="@color/Background">
+    android:background ="@color/colorPrimary">
 
     <include
         layout = "@layout/action_bar"
@@ -110,8 +110,9 @@
         android:layout_marginRight="12dp"
         android:layout_marginBottom="20dp"
         android:text="@string/introduction"
-        android:textColor="#FFF"
+        android:textColor="@android:color/black"
         android:textSize="12sp"
+        android:gravity="center"
         app:fontFamily="serif" />
 
     <TextView
@@ -129,8 +130,9 @@
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
         android:text="@string/editorHeader"
-        android:textColor="#FFF"
-        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="16sp"
         app:fontFamily="serif" />
 
     <TextView
@@ -143,8 +145,9 @@
         android:layout_marginTop="18dp"
         android:layout_marginBottom="-44dp"
         android:text="@string/introHeader"
-        android:textColor="#FFF"
-        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="16sp"
         app:fontFamily="serif" />
 
     <TextView
@@ -154,9 +157,11 @@
         android:layout_below="@+id/EditorialHeader"
         android:layout_centerHorizontal="true"
         android:text="@string/editorChief"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/AssistantEditorChief"
@@ -165,8 +170,10 @@
         android:layout_below="@+id/EditorChief"
         android:layout_centerHorizontal="true"
         android:text="@string/assistantEditorChief"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textColorLink="#523178"
         android:textSize="12sp" />
 
     <TextView
@@ -176,8 +183,10 @@
         android:layout_below="@+id/AssistantEditorChief"
         android:layout_centerHorizontal="true"
         android:text="@string/newsEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
         android:textSize="12sp" />
 
     <TextView
@@ -187,8 +196,10 @@
         android:layout_below="@+id/NewsEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/featuresEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
         android:textSize="12sp" />
 
     <TextView
@@ -198,9 +209,11 @@
         android:layout_below="@+id/FeaturesEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/artEntertainmentEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/OpinionEditor"
@@ -209,9 +222,11 @@
         android:layout_below="@+id/ArtEntertainmentEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/opinionEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/CopyEditor"
@@ -220,21 +235,25 @@
         android:layout_below="@+id/OpinionEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/copyEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/LayoutEditor"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="17dp"
         android:layout_below="@+id/CopyEditor"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/layoutEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
 </RelativeLayout>
