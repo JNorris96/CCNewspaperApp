@@ -29,23 +29,24 @@
 
     <Button
         android:id="@+id/MainButton"
-        android:layout_width="61dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="128dp"
-        android:text="@string/mainButtonText"
         android:background="@color/Background"
+        android:text="@string/mainButtonText"
         android:textColor="@color/colorPrimary"
         android:textColorLink="@color/colorAccent"
         android:typeface="serif"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/AboutUsButton"
-        android:layout_width="72dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cornellianHead"
         android:layout_marginTop="128dp"
@@ -55,12 +56,13 @@
         android:text="@string/aboutUsButtonText"
         android:textColor="@color/colorPrimary"
         android:typeface="serif"
+        android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/MainButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ContactUsButton"
-        android:layout_width="90dp"
+        android:layout_width="98dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="128dp"
@@ -70,27 +72,29 @@
         android:text="@string/contactUsButtonText"
         android:textColor="@color/colorPrimary"
         android:typeface="serif"
+        android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/AboutUsButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ArchiveButton"
-        android:layout_width="wrap_content"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/MainButton"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginLeft="-4dp"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
         android:layout_toEndOf="@+id/ContactUsButton"
         android:layout_toRightOf="@+id/ContactUsButton"
         android:background="@color/Background"
         android:text="@string/archiveButtonText"
         android:textColor="@color/colorPrimary"
         android:typeface="serif"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ContactUsButton"
         app:layout_constraintTop_toTopOf="parent" />
@@ -108,6 +112,7 @@
 
         <TextView
             android:id="@+id/itemTitle"
+            android:gravity="center"
             android:textStyle="bold"
             android:typeface="serif"
             android:layout_width="match_parent"
