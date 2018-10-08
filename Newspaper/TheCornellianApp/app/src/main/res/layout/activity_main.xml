@@ -95,24 +95,31 @@
 
         <TextView
             android:id="@+id/itemTitle"
+            android:textStyle="bold"
+            android:typeface="serif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/titleBoxText" />
 
         <TextView
             android:id="@+id/itemCreator"
+            android:typeface="serif"
+            android:textStyle="italic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/authorBoxText" />
 
         <TextView
             android:id="@+id/itemPubDate"
+            android:typeface="serif"
+            android:textStyle="italic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/dateBoxText" />
 
         <TextView
             android:id="@+id/itemContent"
+            android:typeface="serif"
             android:layout_width="match_parent"
             android:layout_height="198dp"
             android:text="@string/contextBoxText" />
