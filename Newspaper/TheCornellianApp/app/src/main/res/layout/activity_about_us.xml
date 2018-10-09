@@ -52,10 +52,10 @@
         android:layout_toEndOf="@+id/MainButton"
         android:layout_toRightOf="@+id/MainButton"
         android:background="@color/Background"
-        android:text="@string/aboutUsButtonText"
-        android:textColor="@color/colorPrimary"
-        android:typeface="serif"
         android:gravity="center"
+        android:text="@string/aboutUsButtonText"
+        android:textColor="@color/colorAccent"
+        android:typeface="serif"
         app:layout_constraintStart_toEndOf="@+id/MainButton"
         app:layout_constraintTop_toTopOf="parent" />
 

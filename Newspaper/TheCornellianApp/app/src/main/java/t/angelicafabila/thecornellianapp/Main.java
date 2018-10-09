@@ -124,6 +124,7 @@ public class Main extends AppCompatActivity
         String date;
         String content;
 
+        //This method uses jsoup to connect to the Cornellian and retrieve the desired text values
         @Override
         protected Void doInBackground(Void... voids)
         {
