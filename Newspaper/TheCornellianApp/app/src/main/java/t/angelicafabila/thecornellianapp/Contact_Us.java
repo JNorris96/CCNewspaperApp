@@ -72,6 +72,9 @@ public class Contact_Us extends AppCompatActivity {
             public void onClick(View view)
             {
                 startActivity(new Intent(Intent.ACTION_VIEW,
+                        /** Tells the content provider what needs to be accessed. Content providers connect data in one process with
+                         * another data in another process.
+                        **/
                         Uri.parse("http://cornellcollege.advantage-preservation.com/")));
             }
         });

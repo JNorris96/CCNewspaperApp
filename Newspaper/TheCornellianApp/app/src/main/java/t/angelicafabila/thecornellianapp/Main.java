@@ -2,6 +2,9 @@ package t.angelicafabila.thecornellianapp;
 
 import android.content.Intent;
 import android.net.Uri;
+/*URI identifies an abstract/physical resource in the web. Objects in the web are also called "First Class Objects."
+Android uses URI to request data and/or actions.
+ */
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
