@@ -120,6 +120,10 @@ public class Main extends AppCompatActivity
         });
     }
 
+    /**
+     * AsyncTask allows for easy use of the UI thread, without having to manipulate the strings
+     * themselves. It allows for easy use of operations that only take a few seconds.
+     */
     public class getNews extends AsyncTask<Void, Void, Void>
     {
         String title;
