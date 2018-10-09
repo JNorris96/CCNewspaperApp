@@ -66,7 +66,7 @@ public class Main extends AppCompatActivity
         configureContactUsButton();
         configureArchiveButton();
     }
-
+    //Function to configure the Home page button.
     private void configureMainButton()
     {
         Button mainButton = findViewById(R.id.MainButton);
@@ -79,6 +79,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+    //Function to configure the About Us button.
     private void configureAboutUsButton()
     {
         Button aboutUsButton = findViewById(R.id.AboutUsButton);
@@ -91,6 +92,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+    //Function to configure the Contact Us button.
     private void configureContactUsButton()
     {
         Button contactUsButton = findViewById(R.id.ContactUsButton);
@@ -103,6 +105,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+    //Function to configure the archive button.
     private void configureArchiveButton()
     {
         Button archiveButton = findViewById(R.id.ArchiveButton);
@@ -117,6 +120,10 @@ public class Main extends AppCompatActivity
         });
     }
 
+    /**
+     * AsyncTask allows for easy use of the UI thread, without having to manipulate the strings
+     * themselves. It allows for easy use of operations that only take a few seconds.
+     */
     public class getNews extends AsyncTask<Void, Void, Void>
     {
         String title;
