@@ -36,11 +36,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="128dp"
         android:background="@color/Background"
+        android:gravity="center"
         android:text="@string/mainButtonText"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
         android:textColorLink="@color/colorAccent"
         android:typeface="serif"
-        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,10 +69,10 @@
         android:layout_toEndOf="@+id/AboutUsButton"
         android:layout_toRightOf="@+id/AboutUsButton"
         android:background="@color/Background"
+        android:gravity="center"
         android:text="@string/contactUsButtonText"
         android:textColor="@color/colorPrimary"
         android:typeface="serif"
-        android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/AboutUsButton"
         app:layout_constraintTop_toTopOf="parent" />
 
