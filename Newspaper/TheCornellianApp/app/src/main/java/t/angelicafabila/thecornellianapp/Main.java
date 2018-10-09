@@ -2,6 +2,9 @@ package t.angelicafabila.thecornellianapp;
 
 import android.content.Intent;
 import android.net.Uri;
+/*URI identifies an abstract/physical resource in the web. Objects in the web are also called "First Class Objects."
+Android uses URI to request data and/or actions.
+ */
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +22,7 @@ import java.io.IOException;
 
 public class Main extends AppCompatActivity
 {
+    //The following lines are initializing the textviews programmatically on the main activity so that they can be updated to different text programmatically
     TextView itemTitleBox;
     TextView itemAuthorBox;
     TextView itemDateBox;
@@ -125,10 +129,12 @@ public class Main extends AppCompatActivity
         {
             try
             {
+                //This line uses jsoup to connect to the Cornellian website
                 Document url = Jsoup.connect("https://blogs.cornellcollege.edu/cornellian/").get();
 
+                //Views the HTML document at the above URL, looks for the first h2 tag that has ".entry-title" in the class name
                 Element urlTitleText = url.select("h2.entry-title").first();
-                //urlTitleText.hasClass("entry-title");
+                //This line takes whatever is between the head and tail tag and sets it to the string
                 title = urlTitleText.text();
 
                 Element urlAuthorText = url.select("span").last();
@@ -136,11 +142,9 @@ public class Main extends AppCompatActivity
                 author = urlAuthorText.text();
 
                 Element urlDateText = url.select("span.posted-on").first();
-                //urlDateText.hasClass("posted-on");
                 date = urlDateText.text();
 
                 Element urlContentText = url.select("div.entry-content").first();
-                //urlContentText.hasClass("entry-content");
                 content = urlContentText.text();
             }
             catch (IOException e)
@@ -150,9 +154,11 @@ public class Main extends AppCompatActivity
             return null;
         }
 
+        //This method executes after jsoup connects to the website and gets the text values
         @Override
         protected void onPostExecute(Void aVoid)
         {
+            //These lines set the text views that were initialized at the start of the class to whatever the string was set to in the previous method
             super.onPostExecute(aVoid);
             itemTitleBox.setText(title);
             itemAuthorBox.setText(author);

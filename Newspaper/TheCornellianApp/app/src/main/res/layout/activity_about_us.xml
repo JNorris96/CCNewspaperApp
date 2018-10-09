@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main"
-    android:background ="@color/Background">
+    android:background ="@color/colorPrimary">
 
     <include
         layout = "@layout/action_bar"
@@ -28,55 +28,72 @@
 
     <Button
         android:id="@+id/MainButton"
-        android:layout_width="73dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="128dp"
+        android:background="@color/Background"
         android:text="@string/mainButtonText"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorAccent"
+        android:typeface="serif"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/AboutUsButton"
-        android:layout_width="80dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cornellianHead"
         android:layout_marginTop="128dp"
         android:layout_toEndOf="@+id/MainButton"
         android:layout_toRightOf="@+id/MainButton"
+        android:background="@color/Background"
         android:text="@string/aboutUsButtonText"
+        android:textColor="@color/colorPrimary"
+        android:typeface="serif"
+        android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/MainButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ContactUsButton"
-        android:layout_width="89dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="128dp"
         android:layout_toEndOf="@+id/AboutUsButton"
         android:layout_toRightOf="@+id/AboutUsButton"
+        android:background="@color/Background"
         android:text="@string/contactUsButtonText"
+        android:textColor="@color/colorPrimary"
+        android:typeface="serif"
+        android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/AboutUsButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ArchiveButton"
-        android:layout_width="77dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginRight="63dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
         android:layout_toEndOf="@+id/ContactUsButton"
         android:layout_toRightOf="@+id/ContactUsButton"
+        android:background="@color/Background"
+        android:gravity="center"
         android:text="@string/archiveButtonText"
+        android:textColor="@color/colorPrimary"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ContactUsButton"
         app:layout_constraintTop_toTopOf="parent" />
@@ -97,8 +114,9 @@
         android:layout_marginRight="12dp"
         android:layout_marginBottom="20dp"
         android:text="@string/introduction"
-        android:textColor="#FFF"
+        android:textColor="@android:color/black"
         android:textSize="12sp"
+        android:gravity="center"
         app:fontFamily="serif" />
 
     <TextView
@@ -116,8 +134,9 @@
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
         android:text="@string/editorHeader"
-        android:textColor="#FFF"
-        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="16sp"
         app:fontFamily="serif" />
 
     <TextView
@@ -130,8 +149,9 @@
         android:layout_marginTop="18dp"
         android:layout_marginBottom="-44dp"
         android:text="@string/introHeader"
-        android:textColor="#FFF"
-        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="16sp"
         app:fontFamily="serif" />
 
     <TextView
@@ -141,9 +161,11 @@
         android:layout_below="@+id/EditorialHeader"
         android:layout_centerHorizontal="true"
         android:text="@string/editorChief"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/AssistantEditorChief"
@@ -152,8 +174,10 @@
         android:layout_below="@+id/EditorChief"
         android:layout_centerHorizontal="true"
         android:text="@string/assistantEditorChief"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textColorLink="#523178"
         android:textSize="12sp" />
 
     <TextView
@@ -163,8 +187,10 @@
         android:layout_below="@+id/AssistantEditorChief"
         android:layout_centerHorizontal="true"
         android:text="@string/newsEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
         android:textSize="12sp" />
 
     <TextView
@@ -174,8 +200,10 @@
         android:layout_below="@+id/NewsEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/featuresEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
         android:textSize="12sp" />
 
     <TextView
@@ -185,9 +213,11 @@
         android:layout_below="@+id/FeaturesEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/artEntertainmentEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/OpinionEditor"
@@ -196,9 +226,11 @@
         android:layout_below="@+id/ArtEntertainmentEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/opinionEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/CopyEditor"
@@ -207,21 +239,61 @@
         android:layout_below="@+id/OpinionEditor"
         android:layout_centerHorizontal="true"
         android:text="@string/copyEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/LayoutEditor"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="17dp"
         android:layout_below="@+id/CopyEditor"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/layoutEditor"
-        android:textColor="#FFF"
-        android:textColorLink="#FFF"
-        android:textSize="12sp"/>
+        android:typeface="serif"
+        android:textColor="@android:color/black"
+        android:textColorLink="#523178"
+        android:gravity="center"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="345dp"
+        android:layout_height="4dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="375dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="188dp"
+        android:background="@color/Background" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="299dp"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="199dp"
+        android:background="@color/Background" />
 
 </RelativeLayout>

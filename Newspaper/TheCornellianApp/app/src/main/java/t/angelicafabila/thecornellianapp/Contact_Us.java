@@ -12,10 +12,10 @@ public class Contact_Us extends AppCompatActivity {
     Intent intent = new Intent();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
-
 
         configureMainButton();
         configureAboutUsButton();
@@ -72,6 +72,9 @@ public class Contact_Us extends AppCompatActivity {
             public void onClick(View view)
             {
                 startActivity(new Intent(Intent.ACTION_VIEW,
+                        /** Tells the content provider what needs to be accessed. Content providers connect data in one process with
+                         * another data in another process.
+                        **/
                         Uri.parse("http://cornellcollege.advantage-preservation.com/")));
             }
         });
@@ -98,20 +101,23 @@ public class Contact_Us extends AppCompatActivity {
     }
 
 
-    /* Activity to send user to the Cornellian website. */
-    public void website(View view){
+    /*Activity to send user to the Cornellian website*/
+    public void website(View view)
+    {
         Intent websiteIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("https://blogs.cornellcollege.edu/cornellian/"));
         startActivity(websiteIntent);
     }
-    /* Activity to send user to the Cornellian Facebook page. */
-    public void facebook(View view){
+    /*Activity to send user to the Cornellian Facebook page*/
+    public void facebook(View view)
+    {
         Intent facebookIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("https://www.facebook.com/TheCornellian/"));
         startActivity(facebookIntent);
     }
-    /* Activity to send user to the Cornellian Twitter page. */
-    public void twitter(View view){
+    /*Activity to send user to the Cornellian Twitter page*/
+    public void twitter(View view)
+    {
         Intent twitterIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("https://www.google.com/")); //TODO
         startActivity(twitterIntent);
