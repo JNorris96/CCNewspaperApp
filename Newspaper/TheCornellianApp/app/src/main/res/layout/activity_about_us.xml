@@ -130,7 +130,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="115dp"
         android:layout_marginLeft="115dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
         android:gravity="center"
@@ -247,18 +247,18 @@
 
     <TextView
         android:id="@+id/LayoutEditor"
-        android:layout_width="247dp"
-        android:layout_height="17dp"
+        android:layout_width="246dp"
+        android:layout_height="20dp"
         android:layout_below="@+id/CopyEditor"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
         android:text="@string/layoutEditor"
-        android:typeface="serif"
         android:textColor="@android:color/black"
         android:textColorLink="#523178"
-        android:gravity="center"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:typeface="serif" />
 
     <View
         android:id="@+id/divider"
@@ -272,11 +272,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="21dp"
         android:layout_marginLeft="21dp"
-        android:layout_marginTop="379dp"
+        android:layout_marginTop="376dp"
         android:layout_marginEnd="19dp"
         android:layout_marginRight="19dp"
-        android:layout_marginBottom="184dp"
-        android:background="@color/Background" />
+        android:layout_marginBottom="187dp"
+        android:background="@color/Background"
+        android:foregroundGravity="center" />
 
     <View
         android:id="@+id/divider4"
@@ -288,12 +289,13 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="370dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
-        android:layout_marginBottom="193dp"
-        android:background="@color/Background" />
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="198dp"
+        android:background="@color/Background"
+        android:foregroundGravity="center" />
 
 </RelativeLayout>
