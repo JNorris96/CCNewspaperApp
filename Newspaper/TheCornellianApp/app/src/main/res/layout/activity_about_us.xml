@@ -262,7 +262,7 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="345dp"
+        android:layout_width="wrap_content"
         android:layout_height="4dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -270,30 +270,30 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginTop="375dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="379dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="184dp"
         android:background="@color/Background" />
 
     <View
         android:id="@+id/divider4"
-        android:layout_width="299dp"
-        android:layout_height="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="366dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
-        android:layout_marginBottom="199dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginBottom="193dp"
         android:background="@color/Background" />
 
 </RelativeLayout>
