@@ -133,9 +133,9 @@
         android:layout_marginTop="17dp"
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
+        android:gravity="center"
         android:text="@string/editorHeader"
         android:textColor="@android:color/black"
-        android:gravity="center"
         android:textSize="16sp"
         app:fontFamily="serif" />
 

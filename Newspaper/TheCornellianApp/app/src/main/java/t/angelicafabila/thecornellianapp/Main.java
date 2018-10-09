@@ -66,7 +66,7 @@ public class Main extends AppCompatActivity
         configureContactUsButton();
         configureArchiveButton();
     }
-
+    //Function to configure the Home page button.
     private void configureMainButton()
     {
         Button mainButton = findViewById(R.id.MainButton);
@@ -79,6 +79,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+    //Function to configure the About Us button.
     private void configureAboutUsButton()
     {
         Button aboutUsButton = findViewById(R.id.AboutUsButton);
@@ -91,6 +92,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+    //Function to configure the Contact Us button.
     private void configureContactUsButton()
     {
         Button contactUsButton = findViewById(R.id.ContactUsButton);
@@ -103,6 +105,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+    //Function to configure the archive button.
     private void configureArchiveButton()
     {
         Button archiveButton = findViewById(R.id.ArchiveButton);

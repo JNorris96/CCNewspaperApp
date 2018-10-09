@@ -21,32 +21,32 @@ public class About_Us extends AppCompatActivity {
         configureContactUsButton();
         configureArchiveButton();
 
-        /*Editor chief's hyperlink to their bio. */
+        //Editor chief's in-text hyperlink to their bio.
         TextView editorChiefHyperlink = (TextView) findViewById(R.id.EditorChief);
         editorChiefHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        /*ANGELS' hyperlink to their bio. */
+        //ANGELS' in-text hyperlink to their bio.
         TextView assistantEditorChiefHyperlink = (TextView) findViewById(R.id.AssistantEditorChief);
         assistantEditorChiefHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        /*News editors's hyperlink to their bio. */
+        //News editors's in-text hyperlink to their bio.
         TextView newsEditorHyperlink = (TextView) findViewById(R.id.NewsEditor);
         newsEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        /*Feature Editors's hyperlink to their bio. */
+        //Feature Editors's in-text hyperlink to their bio.
         TextView featuresEditorHyperlink = (TextView) findViewById(R.id.FeaturesEditor);
         featuresEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        /*Art and Entertainment Editors's hyperlink to their bio. */
+        //Art and Entertainment Editors's in-text hyperlink to their bio.
         TextView artEntertainmentEditorHyperlink = (TextView) findViewById(R.id.ArtEntertainmentEditor);
         artEntertainmentEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        /*Opinion Editor's hyperlink to their bio. */
+        //Opinion Editor's in-text hyperlink to their bio.
         TextView opinionEditorHyperlink = (TextView) findViewById(R.id.OpinionEditor);
         opinionEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        /*Copy editor's hyperlink to their bio. */
+        //Copy editor's in-text hyperlink to their bio.
         TextView copyEditorHyperlink = (TextView) findViewById(R.id.CopyEditor);
         copyEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        /*Layout editor's hyperlink to their bio. */
+        //Layout editor's in-text hyperlink to their bio. */
         TextView layoutEditorHyperlink = (TextView) findViewById(R.id.LayoutEditor);
         layoutEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
     }
-
+    //Function to configure the Home Page button.
     private void configureMainButton()
     {
         Button mainButton = (Button) findViewById(R.id.MainButton);
@@ -59,7 +59,7 @@ public class About_Us extends AppCompatActivity {
             }
         });
     }
-
+    //Function to configure the About Us button.
     private void configureAboutUsButton()
     {
         Button aboutUsButton = (Button) findViewById(R.id.AboutUsButton);
@@ -72,7 +72,7 @@ public class About_Us extends AppCompatActivity {
             }
         });
     }
-
+    //Function to configure the Contact Us button.
     private void configureContactUsButton() {
         Button contactUsButton = (Button) findViewById(R.id.ContactUsButton);
         contactUsButton.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +82,7 @@ public class About_Us extends AppCompatActivity {
             }
         });
     }
+    //Function to configure the archive button.
     private void configureArchiveButton()
     {
         Button archiveButton = (Button) findViewById(R.id.ArchiveButton);

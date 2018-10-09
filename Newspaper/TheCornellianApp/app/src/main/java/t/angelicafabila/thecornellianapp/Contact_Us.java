@@ -23,8 +23,7 @@ public class Contact_Us extends AppCompatActivity {
         configureArchiveButton();
         configureEmailButton();
     }
-
-
+    //Function to configure the Home page button.
     private void configureMainButton()
     {
         Button mainButton = (Button) findViewById(R.id.MainButton);
@@ -37,7 +36,7 @@ public class Contact_Us extends AppCompatActivity {
             }
         });
     }
-
+    //Function to configure the About Us button.
     private void configureAboutUsButton()
     {
         Button aboutUsButton = (Button) findViewById(R.id.AboutUsButton);
@@ -50,7 +49,7 @@ public class Contact_Us extends AppCompatActivity {
             }
         });
     }
-
+    //Function to configure the Contact Us button.
     private void configureContactUsButton()
     {
         Button contactUsButton = (Button) findViewById(R.id.ContactUsButton);
@@ -63,6 +62,7 @@ public class Contact_Us extends AppCompatActivity {
             }
         });
     }
+    //Function to configure the archive button.
     private void configureArchiveButton()
     {
         Button archiveButton = (Button) findViewById(R.id.ArchiveButton);
@@ -80,6 +80,7 @@ public class Contact_Us extends AppCompatActivity {
         });
     }
 
+    //Function to configure the email button.
     private void configureEmailButton()
     {
         Button EmailButton = findViewById(R.id.EmailButton);
@@ -101,21 +102,21 @@ public class Contact_Us extends AppCompatActivity {
     }
 
 
-    /*Activity to send user to the Cornellian website*/
+    //Activity to set the intent of the website button.
     public void website(View view)
     {
         Intent websiteIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("https://blogs.cornellcollege.edu/cornellian/"));
         startActivity(websiteIntent);
     }
-    /*Activity to send user to the Cornellian Facebook page*/
+    //Activity to set the intent of the Facebook button.
     public void facebook(View view)
     {
         Intent facebookIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("https://www.facebook.com/TheCornellian/"));
         startActivity(facebookIntent);
     }
-    /*Activity to send user to the Cornellian Twitter page*/
+    //Activity to set the intent of the Twitter button.
     public void twitter(View view)
     {
         Intent twitterIntent = new Intent(Intent.ACTION_VIEW,
