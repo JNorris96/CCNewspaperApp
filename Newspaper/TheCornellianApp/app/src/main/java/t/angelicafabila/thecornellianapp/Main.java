@@ -24,6 +24,14 @@ public class Main extends AppCompatActivity
     TextView itemDateBox;
     TextView itemContentBox;
 
+    /**
+     *
+     * @param savedInstanceState
+     *
+     * The "onCreate" method is called to initially create the activity upon app startup.
+     * It is called only once during the activity's life cycle. 
+     * The parameter "savedInstanceState" is the main build of our app.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
