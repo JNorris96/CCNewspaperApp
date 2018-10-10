@@ -20,7 +20,7 @@
     <string name="assistantEditorChief"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/assistant-editor-in-chief/">Assistant Editor in Chief: Angel Fabila</a></string>
     <string name="newsEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/news-editor/">News Editor: Matthew McDermott</a></string>
     <string name="featuresEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/features-editor/">Features Editor: Emily Maniacci</a></string>
-    <string name="artEntertainmentEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/arts-entertainment-editor/">Arts and Entertainment Editor: Maddie Leman</a></string>
+    <string name="artEntertainmentEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/arts-entertainment-editor/">Arts/Entertainment Editor: Maddie Leman</a></string>
     <string name="opinionEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/opinions-editor/">Opinion Editor: Sofia Lopera Cordona</a></string>
     <string name="copyEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/copy-editor/">Copy Editor: Alexandra Lewyn</a></string>
     <string name="layoutEditor"><a href="https://blogs.cornellcollege.edu/cornellian/editorial-staff/layout-editor/">Layout Editor: Sage Parker</a></string>
@@ -30,6 +30,7 @@
     <string name="dateBoxText">Pub Date</string>
     <string name="contextBoxText">Content</string>
     <string name="refreshImageDesc">Android Source Image Files Refresh</string>
+    <string name="RefreshPicture">Android-supplied refresh picture</string>
 
 
     <string-array name="items">
