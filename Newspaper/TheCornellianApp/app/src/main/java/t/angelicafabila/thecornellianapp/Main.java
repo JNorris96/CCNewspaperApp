@@ -42,9 +42,6 @@ public class Main extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //add Toolbar
-        Toolbar toolbar = findViewById(R.id.actionbar);
-        setSupportActionBar(toolbar);
 
         ImageButton feedRefreshButton = findViewById(R.id.feedRefresh);
         feedRefreshButton.setOnClickListener(new View.OnClickListener()
