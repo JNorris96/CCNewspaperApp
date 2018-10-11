@@ -106,7 +106,7 @@ public class Contact_Us extends AppCompatActivity {
     public void website(View view)
     {
         Intent websiteIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://blogs.cornellcollege.edu/cornellian/"));
+                Uri.parse("https://www.cornellcollege.edu/"));
         startActivity(websiteIntent);
     }
     //Activity to set the intent of the Facebook button.
@@ -120,7 +120,7 @@ public class Contact_Us extends AppCompatActivity {
     public void twitter(View view)
     {
         Intent twitterIntent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://www.google.com/")); //TODO
+                Uri.parse("https://www.twitter.com")); //TODO
         startActivity(twitterIntent);
     }
 }
