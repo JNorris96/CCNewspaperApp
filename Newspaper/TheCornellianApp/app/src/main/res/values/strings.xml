@@ -31,6 +31,9 @@
     <string name="contextBoxText">Content</string>
     <string name="refreshImageDesc">Android Source Image Files Refresh</string>
     <string name="RefreshPicture">Android-supplied refresh picture</string>
+    <string name="EmailBtn">SEND A LETTER TO THE EDITOR</string>
+    <string name="Question">Do you have any comments, questions, or suggestions? </string>
+    <string name="DirectTo">Our meetings are held every Sunday at 5:30 p.m. at Russell Hall</string>
 
 
     <string-array name="items">
