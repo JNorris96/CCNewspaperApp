@@ -1,4 +1,4 @@
-package t.angelicafabila.thecornellianapp;
+package com.cornellian.mobile;
 
 import org.junit.Test;
 

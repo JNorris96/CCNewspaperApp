@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="t.angelicafabila.thecornellianapp">
+    package="com.cornellian.mobile">
     
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     
@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+        <activity android:name="com.cornellian.mobile.SplashActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Main">
+        <activity android:name="com.cornellian.mobile.Main">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
@@ -33,8 +33,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".About_Us"></activity>
+            android:name="com.cornellian.mobile.About_Us"></activity>
         <activity
-            android:name=".Contact_Us"></activity>
+            android:name="com.cornellian.mobile.Contact_Us"></activity>
     </application>
 </manifest>

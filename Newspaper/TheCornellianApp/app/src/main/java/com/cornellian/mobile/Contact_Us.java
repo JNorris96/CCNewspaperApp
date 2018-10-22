@@ -1,4 +1,4 @@
-package t.angelicafabila.thecornellianapp;
+package com.cornellian.mobile;
 
 import android.content.Intent;
 import android.net.Uri;

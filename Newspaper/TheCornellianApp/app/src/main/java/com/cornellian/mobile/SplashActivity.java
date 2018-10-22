@@ -1,4 +1,4 @@
-package t.angelicafabila.thecornellianapp;
+package com.cornellian.mobile;
 
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
