@@ -1,4 +1,4 @@
-<h1 align="center">The Cornellian Android App</h1>
+<h1 align="center">The Cornellian Mobile App</h1>
 
 Android Mobile Application for the Official Student Publication of Cornell College, The Cornellian
 
