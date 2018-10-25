@@ -9,8 +9,10 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -26,8 +28,10 @@ public class Main extends AppCompatActivity
     TextView itemDateBox;
     TextView itemContentBox;
 
+    Spinner activitySpinner;
+    int currentActivity = 0;
+
     /**
-     *
      * @param savedInstanceState
      *
      * The "onCreate" method is called to initially create the activity upon app startup.
@@ -39,6 +43,39 @@ public class Main extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        activitySpinner = findViewById(R.id.activitySelector);
+        activitySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                if (currentActivity == position)
+                {
+                    return;
+                }
+                else if (currentActivity - position == -1)
+                {
+                    Intent changeToAboutUs = new Intent(Main.this, About_Us.class);
+                    startActivity(changeToAboutUs);
+                }
+                else if (currentActivity - position == -2)
+                {
+                    Intent changeToContactUs = new Intent(Main.this, Contact_Us.class);
+                    startActivity(changeToContactUs);
+                }
+                else if (currentActivity - position == -3)
+                {
+                    Intent followArchivesURL = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cornellcollege.advantage-preservation.com/"));
+                    startActivity(followArchivesURL);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                return;
+            }
+        });
 
         ImageButton feedRefreshButton = findViewById(R.id.feedRefresh);
         feedRefreshButton.setOnClickListener(new View.OnClickListener()
@@ -55,15 +92,16 @@ public class Main extends AppCompatActivity
         itemDateBox = findViewById(R.id.itemPubDate);
         itemContentBox = findViewById(R.id.itemContent);
 
-        configureMainButton();
-        configureAboutUsButton();
-        configureContactUsButton();
-        configureArchiveButton();
+          /*configureMainButton();
+          configureAboutUsButton();
+          configureContactUsButton();
+          configureArchiveButton();*/
     }
-    //Function to configure the Home page button.
+
+    /*//Function to configure the Home page button.
     private void configureMainButton()
     {
-        Button mainButton = findViewById(R.id.MainButton);
+        //Button mainButton = findViewById(R.id.MainButton);
         mainButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -73,6 +111,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+
     //Function to configure the About Us button.
     private void configureAboutUsButton()
     {
@@ -86,6 +125,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+
     //Function to configure the Contact Us button.
     private void configureContactUsButton()
     {
@@ -99,6 +139,7 @@ public class Main extends AppCompatActivity
             }
         });
     }
+
     //Function to configure the archive button.
     private void configureArchiveButton()
     {
@@ -112,7 +153,7 @@ public class Main extends AppCompatActivity
                             Uri.parse("http://cornellcollege.advantage-preservation.com/")));
             }
         });
-    }
+    }*/
 
     /**
      * AsyncTask allows for easy use of the UI thread, without having to manipulate the strings

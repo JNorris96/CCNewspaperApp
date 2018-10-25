@@ -36,11 +36,12 @@
     <string name="DirectTo">Our meetings are held every Sunday at 5:30 p.m. at Russell Hall</string>
 
 
-    <string-array name="items">
-        <item>Home</item>
+    <array name="activities">
+        <item>Latest News</item>
         <item>About Us</item>
         <item>Contact Us</item>
-    </string-array>
+        <item>Archives</item>
+    </array>
 
     <string-array name="staff">
         <item>Editorial Board</item>
