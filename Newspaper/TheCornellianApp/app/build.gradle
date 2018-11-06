@@ -16,7 +16,7 @@ android {
 
     compileSdkVersion 28
     defaultConfig {
-        applicationId "t.angelicafabila.thecornellianapp"
+        applicationId "com.cornellian.mobile"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1

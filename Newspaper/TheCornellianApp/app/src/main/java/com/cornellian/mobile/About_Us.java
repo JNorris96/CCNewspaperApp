@@ -6,94 +6,77 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class About_Us extends AppCompatActivity {
 
+    Spinner activitySpinner;
+    int currentActivity = 1;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        configureMainButton();
-        configureAboutUsButton();
-        configureContactUsButton();
-        configureArchiveButton();
+        activitySpinner = findViewById(R.id.activitySelector);
+        activitySpinner.setSelection(currentActivity, false);
 
-        //Editor chief's in-text hyperlink to their bio.
-        TextView editorChiefHyperlink = (TextView) findViewById(R.id.EditorChief);
+        activitySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                final Intent intent;
+                switch (position)
+                {
+                    case 0:
+                        intent = new Intent(About_Us.this, Main.class);
+                        break;
+                    case 2:
+                        intent = new Intent(About_Us.this, Contact_Us.class);
+                        break;
+                    case 3:
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cornellcollege.advantage-preservation.com/"));
+                        break;
+                    case 1:
+                        default:
+                            return;
+                }
+                startActivity(intent);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                return;
+            }
+        });
+
+        //The following block of lines are the in-text hyperlink to the editors bio.
+        TextView editorChiefHyperlink = findViewById(R.id.EditorChief);
         editorChiefHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        //ANGELS' in-text hyperlink to their bio.
-        TextView assistantEditorChiefHyperlink = (TextView) findViewById(R.id.AssistantEditorChief);
+
+        TextView assistantEditorChiefHyperlink = findViewById(R.id.AssistantEditorChief);
         assistantEditorChiefHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        //News editors's in-text hyperlink to their bio.
-        TextView newsEditorHyperlink = (TextView) findViewById(R.id.NewsEditor);
+
+        TextView newsEditorHyperlink = findViewById(R.id.NewsEditor);
         newsEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        //Feature Editors's in-text hyperlink to their bio.
-        TextView featuresEditorHyperlink = (TextView) findViewById(R.id.FeaturesEditor);
+
+        TextView featuresEditorHyperlink = findViewById(R.id.FeaturesEditor);
         featuresEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        //Art and Entertainment Editors's in-text hyperlink to their bio.
-        TextView artEntertainmentEditorHyperlink = (TextView) findViewById(R.id.ArtEntertainmentEditor);
+
+        TextView artEntertainmentEditorHyperlink = findViewById(R.id.ArtEntertainmentEditor);
         artEntertainmentEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        //Opinion Editor's in-text hyperlink to their bio.
-        TextView opinionEditorHyperlink = (TextView) findViewById(R.id.OpinionEditor);
+
+        TextView opinionEditorHyperlink = findViewById(R.id.OpinionEditor);
         opinionEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        //Copy editor's in-text hyperlink to their bio.
-        TextView copyEditorHyperlink = (TextView) findViewById(R.id.CopyEditor);
+
+        TextView copyEditorHyperlink = findViewById(R.id.CopyEditor);
         copyEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-        //Layout editor's in-text hyperlink to their bio. */
-        TextView layoutEditorHyperlink = (TextView) findViewById(R.id.LayoutEditor);
+
+        TextView layoutEditorHyperlink = findViewById(R.id.LayoutEditor);
         layoutEditorHyperlink.setMovementMethod(LinkMovementMethod.getInstance());
-    }
-    //Function to configure the Home Page button.
-    private void configureMainButton()
-    {
-        Button mainButton = (Button) findViewById(R.id.MainButton);
-        mainButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity(new Intent(About_Us.this, Main.class));
-            }
-        });
-    }
-    //Function to configure the About Us button.
-    private void configureAboutUsButton()
-    {
-        Button aboutUsButton = (Button) findViewById(R.id.AboutUsButton);
-        aboutUsButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity(new Intent(About_Us.this, About_Us.class));
-            }
-        });
-    }
-    //Function to configure the Contact Us button.
-    private void configureContactUsButton() {
-        Button contactUsButton = (Button) findViewById(R.id.ContactUsButton);
-        contactUsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(About_Us.this, Contact_Us.class));
-            }
-        });
-    }
-    //Function to configure the archive button.
-    private void configureArchiveButton()
-    {
-        Button archiveButton = (Button) findViewById(R.id.ArchiveButton);
-        archiveButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://cornellcollege.advantage-preservation.com/")));
-            }
-        });
     }
 }

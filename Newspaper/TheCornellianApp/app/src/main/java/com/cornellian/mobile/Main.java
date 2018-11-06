@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -44,30 +43,32 @@ public class Main extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //int selectionPosition= ArrayAdapter.getPosition("Latest News");
+        //activitySpinner.setSelection(selectionPosition);
+
         activitySpinner = findViewById(R.id.activitySelector);
-        activitySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        activitySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
-                if (currentActivity == position)
+                final Intent intent;
+                switch (position)
                 {
-                    return;
+                    case 1:
+                        intent = new Intent(Main.this, About_Us.class);
+                        break;
+                    case 2:
+                        intent = new Intent(Main.this, Contact_Us.class);
+                        break;
+                    case 3:
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cornellcollege.advantage-preservation.com/"));
+                        break;
+                    case 0:
+                        default:
+                            return;
                 }
-                else if (currentActivity - position == -1)
-                {
-                    Intent changeToAboutUs = new Intent(Main.this, About_Us.class);
-                    startActivity(changeToAboutUs);
-                }
-                else if (currentActivity - position == -2)
-                {
-                    Intent changeToContactUs = new Intent(Main.this, Contact_Us.class);
-                    startActivity(changeToContactUs);
-                }
-                else if (currentActivity - position == -3)
-                {
-                    Intent followArchivesURL = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cornellcollege.advantage-preservation.com/"));
-                    startActivity(followArchivesURL);
-                }
+                startActivity(intent);
             }
 
             @Override
@@ -98,7 +99,8 @@ public class Main extends AppCompatActivity
           configureArchiveButton();*/
     }
 
-    /*//Function to configure the Home page button.
+    /*
+    //Function to configure the Home page button.
     private void configureMainButton()
     {
         //Button mainButton = findViewById(R.id.MainButton);

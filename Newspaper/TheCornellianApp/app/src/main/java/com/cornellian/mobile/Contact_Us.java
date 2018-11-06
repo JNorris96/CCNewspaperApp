@@ -5,9 +5,16 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-public class Contact_Us extends AppCompatActivity {
+public class Contact_Us extends AppCompatActivity
+{
+
+    Spinner activitySpinner;
+    int currentActivity = 2;
 
     Intent intent = new Intent();
 
@@ -17,67 +24,39 @@ public class Contact_Us extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
-        configureMainButton();
-        configureAboutUsButton();
-        configureContactUsButton();
-        configureArchiveButton();
+        activitySpinner = findViewById(R.id.activitySelector);
+        activitySpinner.setSelection(currentActivity, false);
+
+        activitySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                final Intent intent;
+                switch (position)
+                {
+                    case 0:
+                        intent = new Intent(Contact_Us.this, Main.class);
+                        break;
+                    case 1:
+                        intent = new Intent(Contact_Us.this, About_Us.class);
+                        break;
+                    case 3:
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cornellcollege.advantage-preservation.com/"));
+                        break;
+                    case 2:
+                        default:
+                            return;
+                }
+                startActivity(intent);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                return;
+            }
+        });
         configureEmailButton();
-    }
-    //Function to configure the Home page button.
-    private void configureMainButton()
-    {
-        Button mainButton = (Button) findViewById(R.id.MainButton);
-        mainButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity(new Intent(Contact_Us.this, Main.class));
-            }
-        });
-    }
-    //Function to configure the About Us button.
-    private void configureAboutUsButton()
-    {
-        Button aboutUsButton = (Button) findViewById(R.id.AboutUsButton);
-        aboutUsButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity(new Intent(Contact_Us.this, About_Us.class));
-            }
-        });
-    }
-    //Function to configure the Contact Us button.
-    private void configureContactUsButton()
-    {
-        Button contactUsButton = (Button) findViewById(R.id.ContactUsButton);
-        contactUsButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity(new Intent(Contact_Us.this, Contact_Us.class));
-            }
-        });
-    }
-    //Function to configure the archive button.
-    private void configureArchiveButton()
-    {
-        Button archiveButton = (Button) findViewById(R.id.ArchiveButton);
-        archiveButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                startActivity(new Intent(Intent.ACTION_VIEW,
-                        /** Tells the content provider what needs to be accessed. Content providers connect data in one process with
-                         * another data in another process.
-                        **/
-                        Uri.parse("http://cornellcollege.advantage-preservation.com/")));
-            }
-        });
     }
 
     //Function to configure the email button.
@@ -100,7 +79,6 @@ public class Contact_Us extends AppCompatActivity {
                 }
         });
     }
-
 
     //Activity to set the intent of the website button.
     public void website(View view)
